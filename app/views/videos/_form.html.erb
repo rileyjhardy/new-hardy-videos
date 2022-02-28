@@ -12,26 +12,26 @@
   <% end %>
 
   <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.label :title, { class: "form-label" } %>
+    <%= form.text_field :title, { class: "form-control" } %>
   </div>
 
   <div>
-    <%= form.label :year, style: "display: block" %>
-    <%= form.number_field :year %>
+    <%= form.label :year, { class: "form-label" } %>
+    <%= form.number_field :year, { class: "form-control" } %>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+    <%= form.label :description, { class: "form-label" } %>
+    <%= form.text_area :description, { class: "form-control" } %>
+  </div>
+
+  <div class='mb-3'>
+    <%= form.label :file, { class: "form-label" } %>
+    <%= form.file_field :file, { direct_upload: true, class: 'form-control' } %>
   </div>
 
   <div>
-    <%= form.label :file, style: "display: block" %>
-    <%= form.file_field :file, { direct_upload: true } %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
