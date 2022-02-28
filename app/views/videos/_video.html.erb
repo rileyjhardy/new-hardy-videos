@@ -1,0 +1,22 @@
+<div id="<%= dom_id video %>">
+  <p>
+    <strong>Title:</strong>
+    <%= video.title %>
+  </p>
+
+  <p>
+    <strong>Year:</strong>
+    <%= video.year %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= video.description %>
+  </p>
+
+  <p>
+    <strong>File:</strong>
+    <%= link_to video.file.filename, video.file if video.file.attached? %>
+  </p>
+
+</div>
