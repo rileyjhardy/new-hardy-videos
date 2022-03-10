@@ -1,0 +1,19 @@
+<div class="accordion-item">
+  <h2 class="accordion-header" id="panelsStayOpen-headindg<%= year.first %>">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse<%= year.first %>" aria-expanded="false" aria-controls="panelsStayOpen-collapse<%= year.first %>">
+      <%= year.first %>
+    </button>
+  </h2>
+    <div id="panelsStayOpen-collapse<%= year.first %>" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading<%= year.first %>">
+      <div class="accordion-body d-flex flex-wrap">
+        <% Video.select { |test| test.year == year.first }.each do |video| %>
+        <a href="<%= video_path video %>">
+          <div class="grid-item">
+            <%= image_tag video.file.preview(resize_to_limit: [200,200]) %>
+            <p><%= video.title %></p>
+          </div>
+        </a>
+        <% end %>
+      </div>
+    </div>
+  </div>

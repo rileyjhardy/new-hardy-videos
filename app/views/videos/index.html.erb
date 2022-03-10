@@ -2,12 +2,9 @@
 
 <h1>Videos</h1>
 
-<div id="videos">
-  <% @videos.each do |video| %>
-    <%= render video %>
-    <p>
-      <%= link_to "Show this video", video %>
-    </p>
+<div class="accordion" id="accordionPanelsStayOpenExample">
+  <% Video.years.each do |year| %>
+    <%= render 'videos/accordion-section', year: year %>
   <% end %>
 </div>
 
