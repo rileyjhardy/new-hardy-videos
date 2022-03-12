@@ -9,7 +9,7 @@
         <% Video.select { |test| test.year == year.first }.each do |video| %>
         <a href="<%= video_path video %>">
           <div class="grid-item">
-            <%= image_tag video.file.preview(resize_to_limit: [200,200]) %>
+            <%= image_tag video.file.preview(resize_to_limit: [150,150]) %>
             <p><%= video.title %></p>
           </div>
         </a>
