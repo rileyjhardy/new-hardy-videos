@@ -13,6 +13,8 @@ gem 'pg'
 
 gem 'aws-sdk-s3'
 
+gem 'devise'
+
 gem 'image_processing'
 
 # Use the Puma web server [https://github.com/puma/puma]
