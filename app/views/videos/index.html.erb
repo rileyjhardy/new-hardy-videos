@@ -10,4 +10,6 @@
 
 <br />
 
-<%= link_to "New video", new_video_path, class: "btn btn-primary" %>
+<% if current_user.admin %>
+  <%= link_to "New video", new_video_path, class: "btn btn-primary" %>
+<% end %>
